@@ -1,20 +1,16 @@
 #!/usr/bin/python3
-"""Module contains the pascal triangle fuction.
-
-Provides a pascal_triangle function that returns a representation
-of the pascal triangle.
-"""
+'''Pascal's triangle'''
 
 
 def pascal_triangle(n: int) -> list[list]:
-    """ Generates a representation of teh pascal's triangle.
+    ''' Generates a representation of teh pascal's triangle.
     Args:
         n: The number of levels to generate.
 
     Returns:
         [] If n < 0 else a list of lists representing the triangle
 
-    """
+    '''
     if n < 1:
         return []
 
