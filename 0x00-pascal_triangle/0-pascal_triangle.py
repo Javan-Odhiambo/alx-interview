@@ -2,20 +2,19 @@
 '''Pascal's triangle'''
 
 
-def pascal_triangle(n: int) -> list[list]:
-    '''Returns a Pascal's Triangle representation'''
-    if n < 1:
-        return []
+def pascal_triangle(n):
+    '''Draws Pascal's Triangle'''
+    num_list = []
+    if n <= 0:
+        return num_list
 
-    solution = [[1]]
-    results = [1]
-
-    for i in range(n-1):
-        temp = [0] + results + [0]
-        results = []
+    result = [1]
+    num_list.append(result)
+    for i in range(1, n):
+        temp = [0] + result + [0]
+        result = []
         for j in range(len(temp) - 1):
-            results.append(temp[j] + temp[j+1])
+            result.append(temp[j] + temp[j + 1])
+        num_list.append(result)
 
-        solution.append(results)
-
-    return solution
+    return num_list
