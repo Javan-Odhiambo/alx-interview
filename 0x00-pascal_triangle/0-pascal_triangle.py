@@ -3,14 +3,7 @@
 
 
 def pascal_triangle(n: int) -> list[list]:
-    ''' Generates a representation of teh pascal's triangle.
-    Args:
-        n: The number of levels to generate.
-
-    Returns:
-        [] If n < 0 else a list of lists representing the triangle
-
-    '''
+    '''Returns a Pascal's Triangle representation'''
     if n < 1:
         return []
 
